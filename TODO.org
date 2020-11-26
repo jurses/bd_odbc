@@ -1,0 +1,16 @@
+* Qué hacer [3/4]
+- [X] Visualizar todos los datos de la tabla equipos con el nombre de liga.
+- [X] Insertar equipo. Combobox con las posibles ligas. Comprobar que los datos son correctos.
+- [X] Eliminar equipo, si tiene contratos preguntar si queremos eliminar todo
+- [ ] Modifica todos los datos de los equipos (Salvo el código).
+* Con procedimientos [1/4]
+- [X] Insertar un equipo
+- [ ] Visualizar todos los contratos según un DNI o NIE de futbolista.
+- [ ] Visualizar cantidad de futbolistas con contrato vigente en un equipo y cuantos futbolistas hay en activo en un equipo con precio anual y de recisión menor de los indicados.
+- [ ] Visualizar la cantidad total de meses que ha estado cierto futbolista dni o nie jugando
+
+- Access no tiene procedimientos ni funciones
+
+- Controlar excepciones
+
+- Puedes añadir otras características

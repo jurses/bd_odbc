@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane fx:id="root" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="205.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.0" minWidth="10.0" prefWidth="188.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.0" minWidth="10.0" prefWidth="238.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextField fx:id="tf_conn" text="localhost" GridPane.columnIndex="1" />
+      <PasswordField fx:id="pf_pass" text="caca" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField fx:id="tf_user" text="admin_BDFutbol" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label text="Conexion" />
+      <Label text="Usuario" GridPane.rowIndex="1" />
+      <Label text="Contraseña" GridPane.rowIndex="2" />
+      <Button fx:id="bt_accept" alignment="CENTER" mnemonicParsing="false" text="Conectar" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <VBox prefHeight="30.0" prefWidth="132.0" />
+      <VBox GridPane.columnIndex="2" GridPane.rowSpan="2">
+         <children>
+            <RadioButton fx:id="rb_mysql" mnemonicParsing="false" selected="true" text="MySQL">
+               <toggleGroup>
+                  <ToggleGroup fx:id="selected_sgbd" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rb_access" mnemonicParsing="false" text="Access" toggleGroup="$selected_sgbd" />
+            <RadioButton fx:id="rb_msql" mnemonicParsing="false" text="Microsoft SQL" toggleGroup="$selected_sgbd" />
+         </children>
+      </VBox>
+      <HBox spacing="50.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <children>
+            <Label text="Puerto" />
+            <TextField fx:id="tf_port" prefHeight="26.0" prefWidth="104.0" text="3306" />
+         </children>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </HBox>
+      <Label text="Nombre de la base de datos" GridPane.rowIndex="3" />
+      <TextField fx:id="tf_bdname" prefHeight="26.0" prefWidth="218.0" text="BD_Futbol" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</GridPane>
