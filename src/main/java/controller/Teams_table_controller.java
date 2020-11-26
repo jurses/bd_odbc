@@ -33,7 +33,7 @@ public class Teams_table_controller {
 	private TableColumn<Team, String> tvc_nomEquipo;
 
 	@FXML
-	private TableColumn<Team, ArrayList<League>> tvc_liga;
+	private TableColumn<Team, League> tvc_liga;
 
 	@FXML
 	private TableColumn<Team, String> tvc_localidad;
@@ -67,14 +67,11 @@ public class Teams_table_controller {
 		tvc_localidad.setCellValueFactory(v -> v.getValue().getLocalidad());
 		tvc_codEquipo.setCellValueFactory(v -> v.getValue().getCodEquipo());
 		tvc_internacional.setCellValueFactory(v -> v.getValue().getInternational());
-		
-		
-		
-		tvc_liga.setCellValueFactory(leagues);
+		tvc_liga.setCellValueFactory(v -> v.getValue().getLiga());
 		
 		tvc_localidad.setCellFactory(TextFieldTableCell.forTableColumn());
 		//tvc_codEquipo.setCellFactory(TextFieldTableCell.forTableColumn());
-		tvc_liga.setCellFactory(ComboBoxTableCell.forTableColumn(leagues));
+		tvc_liga.setCellFactory(ComboBoxTableCell.forTableColumn(FXCollections.observableArrayList(leagues)));
 		tvc_internacional.setCellFactory(CheckBoxTableCell.forTableColumn(tvc_internacional));
 	}
 

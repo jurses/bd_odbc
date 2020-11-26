@@ -22,17 +22,17 @@ public class Conn_wrapper_mssql extends Conn_wrapper {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void modify_team(int codEquipo, )
-	{
-		try
-		{
-			PreparedStatement stmnt = null;
-			if (sql_mode == MYSQL)
-				stmnt = conn.prepareStatement("SELECT COUNT(codContrato) FROM contratos WHERE codEquipo=?");
-			else if (sql_mode == MSQL)
-				stmnt = conn.prepareStatement("SELECT COUNT(codContrato) FROM contratos WHERE codEquipo=?");
-		} catch()
-	}
+//	public void modify_team(int codEquipo, )
+//	{
+//		try
+//		{
+//			PreparedStatement stmnt = null;
+//			if (sql_mode == MYSQL)
+//				stmnt = conn.prepareStatement("SELECT COUNT(codContrato) FROM contratos WHERE codEquipo=?");
+//			else if (sql_mode == MSQL)
+//				stmnt = conn.prepareStatement("SELECT COUNT(codContrato) FROM contratos WHERE codEquipo=?");
+//		} catch()
+//	}
 
 	public void remove_team(int codEquipo) {
 		try {
